@@ -33,6 +33,10 @@ import java.nio.ByteBuffer;
  * mark:标记，表示记录当前position的位置。可以通过reset()恢复到mark的位置
  *
  * 0<=mack <= position <=limit<=capacity
+ *
+ * 五、直接缓冲区与非直接缓冲区：
+ * 非直接缓冲区：通过allocate()方法分配缓冲区，将缓冲区建立再JVM的内存中
+ * 直接缓冲区：通过allocateDirect()方法分配直接缓冲区，将缓冲区建立在物理内存中。可以提高效率
  */
 public class TestBuffer {
 
